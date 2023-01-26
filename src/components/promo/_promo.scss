@@ -1,0 +1,55 @@
+.promo {
+  &__title-section {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 1.0869em;
+    text-align: center;
+  }
+  &__video {
+    position: relative;
+    max-width: 954px;
+    max-height: 527px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  &__video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6.6666em;
+    height: 6.6666em;
+    border: 3px solid var(--color-light);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    &--hidden {
+      display: none;
+    }
+  }
+  &__play-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.4444em;
+    height: 2.7777em;
+    transform: translate(-50%, -50%);
+  }
+  &__play-img  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: var(--color-light);
+  }
+  &__play:hover {
+    opacity: 0.9;
+  }
+}

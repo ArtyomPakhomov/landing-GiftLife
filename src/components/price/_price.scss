@@ -1,0 +1,146 @@
+.price {
+  &__title-section {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 1.0434em;
+  }
+}
+
+.price-list {
+  display: flex;
+  gap: 30px;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.375em 1.1875em 1.5625em;
+  flex: 1 1 100%;
+  min-height: 736px;
+  background-color: var(--color-secondary);
+  border-radius: 0.9375em;
+  transition: all 0.3s ease-in-out;
+
+  &__image {
+    width: 100%;
+    height: 295px;
+    margin-bottom: 1.625em;
+    border-radius: 0.625em;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  &__image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2083em;
+    color: #333;
+    margin-bottom: 1em;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    line-height: 1.2em;
+    color: #333333;
+    opacity: 0.96;
+    margin-bottom: 16px;
+  }
+  &__price span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgba(34, 34, 34, 0.8);
+  }
+  &__button {
+    display: block;
+    border-radius: 0.5em;
+    padding: 0.9375em 4.8125em;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+
+  }
+}
+.price-item:hover{
+  flex: 1 0.97 100%;
+  min-height: calc(736px + 12px);
+}
+
+.price-item:hover .price-item__button{
+  padding: 16px 85px;
+}
+
+.price-item:hover .price-item__image{
+  height: calc(295px + 10px);
+}
+
+.grade-benefits {
+  margin-bottom: 24px;
+  &__item {
+    display: flex;
+    align-items: center;
+    line-height: 19px;
+    color: #333333;
+    max-width: 212px;
+
+    &--on > span,
+    &--off > span{
+      display: block;
+      min-width: 10px;
+      min-height: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-right: 12px;
+    }
+    &--on > .grade-benefits__icon{
+      background-image: url('../img/item--on.svg');
+    }
+    &--off > .grade-benefits__icon{
+      background-image: url('../img/item--off.svg');
+    }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.grade-benefits__item.grade-benefits__item--off{
+  opacity: 0.5;
+}
+
+
+
+@media (max-width: 992px) {
+  .price-list {
+    flex-wrap: wrap;
+  }
+
+  .price-item {
+    flex: 1 0.97 40%;
+  }
+
+  .price-item:hover{
+    flex: 1 0.97 40%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .price-item {
+    flex: 1 0.97 50%;
+  }
+
+  .price-item:hover{
+    flex: 1 0.97 50%;
+  }
+}
