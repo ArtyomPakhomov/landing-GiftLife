@@ -33,7 +33,7 @@ function resources() {
 }
 
 function htmlInclude() {
-  return src("./src/pages/*.html")
+  return src("./src/*.html")
     .pipe(
       plumber({
         errorHandler: notify.onError((error) => ({
@@ -158,7 +158,7 @@ function watchFiles() {
   watch("./src/resources/**", resources);
   watch("./src/**/*.scss", stylesSCSS);
   // watch("./src/**/*.css", stylesCSS);
-  watch(["./src/pages/*.html", "./src/components/**/*.html"], htmlInclude);
+  watch(["./src/*.html", "./src/components/**/*.html"], htmlInclude);
   watch("./src/img/**/*.jpg", imgToApp);
   watch("./src/img/**/*.png", imgToApp);
   watch("./src/img/**/*.jpeg", imgToApp);
