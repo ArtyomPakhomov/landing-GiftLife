@@ -16,7 +16,10 @@
   }
 
   &__link:hover {
-    color: var(--color-accent)
+    color: var(--color-accent);
+  }
+  &__link:active {
+    // color: red;
   }
 }
 
@@ -25,8 +28,9 @@
     position: fixed;
     top: 0;
     right: 0;
+    bottom: 0;
+    // height: 100%;
     min-width: 300px;
-    height: 100vh;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.9);
     border-top-left-radius: 20px;

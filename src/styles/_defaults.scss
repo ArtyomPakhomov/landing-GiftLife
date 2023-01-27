@@ -1,6 +1,7 @@
 html {
 	box-sizing: border-box;
 	font-size: 16px;
+  scroll-behavior: smooth;
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -36,4 +37,7 @@ body {
   max-width: calc(var(--offset-page) + (var(--padding-container) * 2));
   padding: 0 var(--padding-container);
   margin: 0 auto;
+}
+
+.page-body {
 }

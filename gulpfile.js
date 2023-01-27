@@ -32,6 +32,10 @@ function resources() {
   return src("./src/resources/**").pipe(dest("./public/resources"));
 }
 
+function fav() {
+  return src("./src/*.ico").pipe(dest("./public/"));
+}
+
 function htmlInclude() {
   return src("./src/*.html")
     .pipe(
@@ -156,6 +160,7 @@ function watchFiles() {
     // open: true,
   });
   watch("./src/resources/**", resources);
+  watch("./src/*.ico", fav);
   watch("./src/**/*.scss", stylesSCSS);
   // watch("./src/**/*.css", stylesCSS);
   watch(["./src/*.html", "./src/components/**/*.html"], htmlInclude);
@@ -178,10 +183,11 @@ exports.scripts = scripts;
 
 exports.default = series(
   delPublic,
+  resources,
+  fav,
   imgToApp,
   imgWebp,
   svgSprites,
-  resources,
   fonts,
   htmlInclude,
   scripts,
