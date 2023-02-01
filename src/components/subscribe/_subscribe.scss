@@ -83,7 +83,7 @@
     border-radius: 10px;
     color: var(--color-light);
     transition: all 0.3s ease-in-out;
-    z-index: 10;
+    z-index: 100;
     overflow: hidden;
   }
   &__button::before {
